@@ -19,12 +19,16 @@ const hideCartHandler = ()=>{
   setShowCart(false)
 
 }
+const removeItem = (item,id)=>{
+  console.log('Nothing is impossible')
+}
+
   return (
     <CartProvider>
-      {showCart && <Cart onClose = {hideCartHandler}></Cart>}
+      {showCart && <Cart onClose = {hideCartHandler} ></Cart>}
       <Header onCartClick={showCartHandler} />
       <MealsSummary/>
-      <AvailableMeals/>
+      <AvailableMeals />
       
     </CartProvider>
   );

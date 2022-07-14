@@ -5,12 +5,15 @@ const CartProvider = props =>{
     const addItemHandler= (item)=>{
         setIsItems([...isItems, item])
     };
-    const removeItemHandler = (id)=>{};
+
+    const removeItemHandler = (item)=>{
+        setIsItems([...isItems,item])
+    };
     const cartContext = {
         items:isItems,
         totalAMount:0,
         addItem: addItemHandler,
-        removeItemHandler: (id)=> {}
+        removeItem: removeItemHandler
     };
     return(
         <CartContext.Provider value={cartContext}>

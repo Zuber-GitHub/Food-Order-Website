@@ -10,7 +10,8 @@ const MealItemForm = (props) => {
    
     const formSubmitHandler = (event)=>{
         event.preventDefault();
-        CartCtx.addItem({amount:parseInt(event.target[0].value)});
+        CartCtx.addItem({...props.itemList,amount:Number(event.target[0].value)});
+        
 
     }
   return (
